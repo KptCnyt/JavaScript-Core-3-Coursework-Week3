@@ -15,7 +15,7 @@ Take a look at the following code:
 ```
 
 Explain why line 4 and line 6 output different numbers.
-
+Answer: Variable Scope
 ## Question 2
 
 Take a look at the following code:
@@ -34,6 +34,9 @@ console.log(y)
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+10          
+undefined 
+//Scope of y is within function so global scope there is not defined y variable
 
 ## Question 3
 
@@ -48,7 +51,7 @@ function f1(val) {
 }
 
 f1(x);
-console.log(x);
+console.log(x); //9
 
 const y = { x: 9 };
 
@@ -58,7 +61,9 @@ function f2(val) {
 }
 
 f2(y);
-console.log(y);
+console.log(y); //{x:10}
 ```
 
 What will be the output of this code. Explain your answer in 50 words or less.
+9       //function get copy of variable however global varibale is not changed
+{x:10}  //function get shallow copy of object and effect the  value of global object
